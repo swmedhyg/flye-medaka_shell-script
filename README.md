@@ -15,7 +15,7 @@ _A instruction on how to use a shell script to run Flye and Medaka on Nanopore r
 
 The aim of this GitHub Page is to provide a simple and easy understandable manual to use Flye and Medaka for high-quality Nanopore reads (like “dna_r10.4.1_e8.2_400bps_sup@5.0.0 - Dorado v0.7.2” basecalled reads). We assume prior default filtering in MinKNOW according to Q10, otherwise we suggest prior filtering with a tool like [chopper](https://github.com/wdecoster/chopper). 
 
-### Beginner Learning Instruction
+### Beginner Learning Instructions
 
 If you are not familiar with Linux command line we suggest looking into these learning instructions for [Linux command line](https://swcarpentry.github.io/shell-novice/index.html) and [conda environments](https://astrobiomike.github.io/unix/conda-intro)
 
