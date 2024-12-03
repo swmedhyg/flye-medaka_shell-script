@@ -7,36 +7,41 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# GitHub Pages
+# Flye assembly and Medaka polishing for Nanopore sequencing
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+_A instruction on how to use a shell script to run Flye and Medaka on Nanopore reads._
 
 </header>
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+The aim of this GitHub Page is to provide a simple and easy understandable manual to use Flye and Medaka for high-quality Nanopore reads (like “dna_r10.4.1_e8.2_400bps_sup@5.0.0 - Dorado v0.7.2” basecalled reads). We assume prior default filtering in MinKNOW according to Q10, otherwise we suggest prior filtering with a tool like [chopper](https://github.com/wdecoster/chopper). 
 
-## Step 1: Enable GitHub Pages
+### Beginner Learning Instruction
 
-_Welcome to GitHub Pages and Jekyll :tada:!_
+If you are not familiar with Linux command line we suggest looking into these learning instructions for [Linux command line](https://swcarpentry.github.io/shell-novice/index.html) and [conda environments](https://astrobiomike.github.io/unix/conda-intro)
 
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
+### How to install
 
-### :keyboard: Activity: Enable GitHub Pages
+For this script, we used conda environments. Therefore we recommend to install Flye and Medaka in conda enviroments according to theier web pages. 
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
+Information on how to install and modify the Flye command line:
+https://github.com/mikolmogorov/Flye?tab=readme-ov-file
+
+Information on how to install and modify the Medaka command line:
+https://github.com/nanoporetech/medaka
+
+### How to use this bash shell script
+
+After downloading the Flye-Medaka.sh file you can copy it in your working location and adapt as nessasary. It is important to adapt the “define variables” part in the script according to your names and file locations. This shell script automatically deletes medaka working folders to minimize memory space. 
+
+Tips and reminders:
+
+- Avoid empty space signs in your file- and folder-names since they can cause issues (“Isolate-A” instead of “Isolate A”).
+- Do not include “/” as a last sign of your path for OUT_DIR_F or WORKING_DIR_M variable since this would cause issues with this script (“path/to/Fly-output” instead of “path/to/Fly-output/”). 
+- If you have more than one read input file, they must be copied into one file. You can do this with the “cat” command (e.g. “cat *.fastq.gz > merged.fastq.gz”).
+- The “pwd” command might be helpful to identify and copy the absolute paths into the variables sector of the shell file.
+
+After defining the variables you can start the shell script by typing “bash Flye-Medaka.sh” in your linux shell Terminal.
+
 
 <footer>
 
