@@ -21,12 +21,12 @@ If you are not familiar with Linux command line we suggest looking into these le
 
 ### How to install
 
-For this script, we used conda environments. Therefore we recommend to install Flye and Medaka in conda enviroments according to theier web pages. 
+For this script, we used conda environments. Therefore we recommend to install Flye and Medaka in conda enviroments according to theier GitHub pages. 
 
-Information on how to install and modify the Flye command line:
+Flye:
 https://github.com/mikolmogorov/Flye?tab=readme-ov-file
 
-Information on how to install and modify the Medaka command line:
+Medaka:
 https://github.com/nanoporetech/medaka
 
 ### How to use this bash shell script
