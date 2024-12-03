@@ -47,5 +47,5 @@ The manual and this shell script were originally created as part of the followin
 
 # Issues and further questions
 
-If you want to report issues or need further help feel free to add them in the [Issue](https://github.com/swmedhyg/flye-medaka_shell-script/issues) section.
+If you want to report issues or need further help feel free to add them in the [Issues](https://github.com/swmedhyg/flye-medaka_shell-script/issues) section.
 
