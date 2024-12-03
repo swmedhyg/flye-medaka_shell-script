@@ -42,18 +42,10 @@ Tips and reminders:
 
 After defining the variables you can start the shell script by typing “bash Flye-Medaka.sh” in your linux shell Terminal.
 
+# Publication
+The manual and this shell script were originally created as part of the following publication:
 
-<footer>
+# Issues and further questions
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+If you want to report issues or need further help feel free to add them in the [Issue](https://github.com/swmedhyg/flye-medaka_shell-script/issues) section.
 
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
