@@ -9,7 +9,7 @@
 
 # Flye assembly and Medaka polishing for Nanopore sequencing
 
-_A instruction on how to use a shell script to run Flye and Medaka on Nanopore reads._
+_An instruction on how to use a shell script to run Flye and Medaka on Nanopore reads._
 
 </header>
 
