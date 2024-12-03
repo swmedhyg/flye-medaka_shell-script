@@ -7,9 +7,9 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# GitHub Pages
+# Flye assembly and Medaka polishing for Nanopore sequencing
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+_A instruction on how to use a shell script to run Flye and Medaka on Nanopore reads._
 
 </header>
 
@@ -21,43 +21,35 @@ _Create a site or blog from your GitHub repositories with GitHub Pages._
 
 ## Welcome
 
-With GitHub Pages, you can host project blogs, documentation, resumes, portfolios, or any other static content you'd like. Your GitHub repository can easily become its own website. In this course, we'll show you how to set up your own site or blog using GitHub Pages.
+The aim of this GitHub Page is to provide a simple and easy understandable manual to use Flye and Medaka for high-quality Nanopore reads (like “dna_r10.4.1_e8.2_400bps_sup@5.0.0 - Dorado v0.7.2” basecalled reads). We assume prior default filtering in MinKNOW according to Q10, otherwise we suggest prior filtering with a tool like [chopper](https://github.com/wdecoster/chopper). 
 
-- **Who is this for**: Beginners, students, project maintainers, small businesses.
-- **What you'll learn**: How to build a GitHub Pages site.
-- **What you'll build**: We'll build a simple GitHub Pages site with a blog. We'll use [Jekyll](https://jekyllrb.com), a static site generator.
-- **Prerequisites**: If you need to learn about branches, commits, and pull requests, take [Introduction to GitHub](https://github.com/skills/introduction-to-github) first.
-- **How long**: This course takes less than one hour to complete.
+### Beginner Learning Instruction
 
-In this course, you will:
+If you are not familiar with Linux command line we suggest looking into these learning instructions for [Linux command line](https://swcarpentry.github.io/shell-novice/index.html) and [conda environments](https://astrobiomike.github.io/unix/conda-intro)
 
-1. Enable GitHub Pages
-2. Configure your site
-3. Customize your home page
-4. Create a blog post
-5. Merge your pull request
+### How to install
 
-### How to start this course
+For this script, we used conda environments. Therefore we recommend to install Flye and Medaka in conda enviroments according to theier web pages. 
 
-<!-- For start course, run in JavaScript:
-'https://github.com/new?' + new URLSearchParams({
-  template_owner: 'skills',
-  template_name: 'github-pages',
-  owner: '@me',
-  name: 'skills-github-pages',
-  description: 'My clone repository',
-  visibility: 'public',
-}).toString()
--->
+Information on how to install and modify the Flye command line:
+https://github.com/mikolmogorov/Flye?tab=readme-ov-file
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=skills&template_name=github-pages&owner=%40me&name=skills-github-pages&description=My+clone+repository&visibility=public)
+Information on how to install and modify the Medaka command line:
+https://github.com/nanoporetech/medaka
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+### How to use this bash shell script
+
+After downloading the Flye-Medaka.sh file you can copy it in your working location and adapt as nessasary. It is important to adapt the “define variables” part in the script according to your names and file locations. This shell script automatically deletes medaka working folders to minimize memory space. 
+
+Tips and reminders:
+
+- Avoid empty space signs in your file- and folder-names since they can cause issues (“Isolate-A” instead of “Isolate A”).
+- Do not include “/” as a last sign of your path for OUT_DIR_F or WORKING_DIR_M variable since this would cause issues with this script (“path/to/Fly-output” instead of “path/to/Fly-output/”). 
+- If you have more than one read input file, they must be copied into one file. You can do this with the “cat” command (e.g. “cat *.fastq.gz > merged.fastq.gz”).
+- The “pwd” command might be helpful to identify and copy the absolute paths into the variables sector of the shell file.
+
+After defining the variables you can start the shell script by typing “bash Flye-Medaka.sh” in your linux shell Terminal.
+
 
 <footer>
 
