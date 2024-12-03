@@ -40,7 +40,7 @@ Tips and reminders:
 - If you have more than one read input file, they must be copied into one file. You can do this with the “cat” command (e.g. “cat *.fastq.gz > merged.fastq.gz”).
 - The “pwd” command might be helpful to identify and copy the absolute paths into the variables sector of the shell file.
 
-After defining the variables you can start the shell script by typing “bash Flye-Medaka.sh” in your linux shell Terminal.
+After defining the variables you can start the shell script by typing “bash Flye-Medaka.sh” in the Terminal.
 
 # Publication
 The manual and this shell script were originally created as part of the following publication:
