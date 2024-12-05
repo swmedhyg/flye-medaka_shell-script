@@ -4,12 +4,12 @@
 #you need to adapt the variables according to your paths and file names
 #do not include “/” as a last sign of your path for OUT_DIR_F or WORKING_DIR_M (“path/to/Fly-output” instead of “path/to/Fly-output/”)
 #Avoid empty space signs in your names and file locations
-#If you have more than one read input file, they must be copied into one file. You can do this with the “cat” command (e.g. “cat *.fastq.gz > merged.fastq.gz”).
+#If you have more than one read input file, they must be copied into one file first. You can do this with the “cat” command (e.g. “cat *.fastq.gz > merged.fastq.gz”).
 
 
 #define variables 
 THREADS=		#Number of available threads e.g. something like THREADS =12 or THREADS=$(nproc)
-READS=			#input of reads e.g. something like READS=path/to/*.fastq or READS=merged.fastq.gz
+READS=			#input of reads e.g. something like READS=path/to/merged.fastq.gz
 OUT_DIR_F=		#the name of your Flye output directory e.g. OUT_DIR_F=path/to/isolatA_Fly-output
 WORKING_DIR_M=		#the name of your Medaka working directory e.g. WORKING_DIR_M=isolatA_Medaka-output
 NAME=			#name of the final fasta file e.g. NAME=path/to/isolatA_flye_medaka.fasta
