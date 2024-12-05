@@ -4,6 +4,7 @@
 #you need to adapt the variables according to your paths and file names
 #do not include “/” as a last sign of your path for OUT_DIR_F or WORKING_DIR_M (“path/to/Fly-output” instead of “path/to/Fly-output/”)
 #Avoid empty space signs in your names and file locations
+#If you have more than one read input file, they must be copied into one file. You can do this with the “cat” command (e.g. “cat *.fastq.gz > merged.fastq.gz”).
 
 
 #define variables 
