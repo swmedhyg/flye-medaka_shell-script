@@ -43,7 +43,10 @@ Tips and reminders:
 After defining the variables you can start the shell script by typing “bash Flye-Medaka.sh” in the Terminal.
 
 # Publication
-The manual and this shell script were originally created as part of the following publication:
+The manual and this shell script were originally created as part of the following [publication](https://doi.org/10.1128/jcm.01569-24):
+
+Weigl S, Dabernig-Heinz J, Granitz F, Lipp M, Ostermann L, Harmsen D, Trinh TT, Steinmetz I, Wagner GE, Lichtenegger S. 0. Improving Nanopore sequencing-based core genome MLST for global infection control: a strategy for GC-rich pathogens like _Burkholderia pseudomallei_. J Clin Microbiol 0:e01569-24.
+https://doi.org/10.1128/jcm.01569-24 
 
 # Issues and further questions
 
